@@ -1,5 +1,9 @@
-# lelelele
+# lelele
+import pickle
 
-print("lelelelel")
-
-# this is a change in source
+f = open("highscores.txt", "w")
+kek = [("GOSHO", 10), ("PESHO", 0)]
+for i in kek:
+    f.write(i[0] + "\n")
+    f.write(str(i[1]) + "\n")
+f.close()

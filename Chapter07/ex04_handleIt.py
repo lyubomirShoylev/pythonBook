@@ -14,6 +14,7 @@ except ValueError:
     print("That was not a number!")
 
 # handle multiple exception types
+# with one except argument
 print()
 for value in (None, "Hi!"):
     try:
@@ -22,6 +23,7 @@ for value in (None, "Hi!"):
     except (TypeError, ValueError):
         print("Something went wrong!")
 
+# with several except arguments
 print()
 for value in (None, "Hi!"):
     try:
@@ -31,3 +33,20 @@ for value in (None, "Hi!"):
         print("I can only convert a string or a number!")
     except ValueError:
         print("I can only convert a string of digits!")
+
+# get an exception's argument
+try:
+    num = float(input("\nEnter a number: "))
+except ValueError as e:
+    print("That's not a number! Or as Python would say...")
+    print(e)
+
+# try/except/else
+try:
+    num = float(input("\nEnter a number: "))
+except ValueError:
+    print("That's not a number!")
+else:
+    print("You entered the number", num)
+
+input("\n\nPress the enter key to exit.")

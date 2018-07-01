@@ -1,0 +1,6 @@
+GOSHO
+10
+LYUBO
+1
+PESHO
+0
