@@ -1,7 +1,8 @@
-# Critter Caretaker - 1
+# Critter Caretaker - 2
 # 
 # A virtual pet to take care of
 # *The amount of food/play affects how quickly the levels drop
+# **A backdoor so you can peek at critter values
 
 class Critter(object):
     """A virtual pet"""
@@ -11,6 +12,11 @@ class Critter(object):
         self.boredom = boredom
         self.hungerTick = 1
         self.boredomTick = 1
+    
+    def __str__(self):
+        rep = "critter values:\n" + "name: " + self.name + "\nhunger: " + str(self.hunger)
+        rep += "\nboredom: " + str(self.boredom) + "\n"
+        return rep 
     
     def __passTime(self):
         # the passage of time is self-regulated based on the amount of play/food
@@ -86,6 +92,10 @@ def main():
         elif choice == "3":
             amount = int(input("\n\tFor how much do you want to play? "))
             crit.play(amount)
+        
+        # secret choice to show values
+        elif choice == "26":
+            print(crit)
         
         # some unknown choice
         else:
