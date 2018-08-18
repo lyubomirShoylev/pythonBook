@@ -1,0 +1,4 @@
+GOSHO
+10
+PESHO
+0

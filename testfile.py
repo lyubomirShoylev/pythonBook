@@ -8,4 +8,6 @@ for i in kek:
     f.write(str(i[1]) + "\n")
 f.close()
 
+print("hello")
+
 # i will mess with this file just to test if this is set up corretly

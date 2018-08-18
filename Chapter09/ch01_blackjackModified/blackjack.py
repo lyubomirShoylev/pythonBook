@@ -181,7 +181,7 @@ def main():
         names.append(name)
     
     print()
-
+    
     game = BJGame(names)
     
     again = None
