@@ -8,7 +8,7 @@ import games, cards
 class WarCard(cards.Card):
     """A War Card."""
     ACE_VALUE = 14
-
+    
     @property
     def value(self):
         if self.isFaceUp:
@@ -149,7 +149,7 @@ def main():
         names.append(name)
     
     print()
-
+    
     game = WarGame(names)
     again = None
     while again != "n":
